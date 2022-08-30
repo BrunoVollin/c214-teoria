@@ -39,7 +39,7 @@ Teste uma classe responsável por popular uma página _WEB_ com informações re
 
 Com o Python instalado, execute os seguintes comandos no `cmd`:
 
-```
+```cmd
 python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
