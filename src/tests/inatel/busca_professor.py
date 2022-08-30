@@ -20,7 +20,7 @@ class TesteBuscaProfessor(unittest.TestCase):
         """
         Tests if the professor Chris is found.
         """
-        professor = self.busca_professor.busca_professor(1)
+        professor = self.busca_professor.busca_professor(0)
         self.assertEqual("Chris", professor.get_nome())
         self.assertEqual("15:30", professor.get_horario_atendimento())
         self.assertEqual("Integral", professor.get_periodo())
@@ -29,7 +29,7 @@ class TesteBuscaProfessor(unittest.TestCase):
         """
         Tests if the professor Marcelo is found.
         """
-        professor = self.busca_professor.busca_professor(2)
+        professor = self.busca_professor.busca_professor(1)
         self.assertEqual("Marcelo", professor.get_nome())
         self.assertEqual("13:30", professor.get_horario_atendimento())
         self.assertEqual("Noturno", professor.get_periodo())
@@ -38,7 +38,7 @@ class TesteBuscaProfessor(unittest.TestCase):
         """
         Tests if the professor RenZo is found.
         """
-        professor = self.busca_professor.busca_professor(3)
+        professor = self.busca_professor.busca_professor(2)
         self.assertEqual("RenZo", professor.get_nome())
         self.assertEqual("17:30", professor.get_horario_atendimento())
         self.assertEqual("Integral", professor.get_periodo())
