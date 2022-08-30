@@ -1,21 +1,28 @@
-'''
-Executa os testes do projeto Inatel.
-'''
+"""
+Script to execute all tests in this module.
+"""
 
 import unittest
 from src.tests.inatel.busca_professor import TesteBuscaProfessor
 
 
-def suite():
-    '''
-    Unifica todos os testes deste módulo em uma suite de testes.
-    '''
-    new_suite = unittest.TestSuite()
-    new_suite.addTest(unittest.makeSuite(TesteBuscaProfessor))
-    return new_suite
+def create_suite():
+    """
+    Creates a test suite with all tests in this module.
+
+    ...
+
+    Returns
+    -------
+    unittest.TestSuite
+        Test suite with all tests in this module.
+    """
+    test_suite = unittest.TestSuite()
+    test_suite.addTest(unittest.makeSuite(TesteBuscaProfessor))
+    return test_suite
 
 
 if __name__ == '__main__':
-    test_suite = suite()
+    suite = create_suite()
     runner = unittest.TextTestRunner()
-    runner.run(test_suite)
+    runner.run(suite)

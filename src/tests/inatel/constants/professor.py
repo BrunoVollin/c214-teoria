@@ -1,16 +1,20 @@
-'''
-Contém informações de professores.
-'''
+"""
+Contains constants used to mock data from professors.
 
-__all__ = ['CHRIS', 'MARCELO', 'RENZO', 'PADRAO']
+...
+
+Attributes
+----------
+CHRIS : str
+    Constant containing the data of the professor Chris.
+MARCELO : str
+    Constant containing the data of the professor Marcelo.
+RENZO : str
+    Constant containing the data of the professor Renzo.
+"""
+
+__all__ = ['CHRIS', 'MARCELO', 'RENZO']
 
 CHRIS = '{"nomeDoProfessor": "Chris", "horarioDeAtendimento": "15:30", "periodo": "Integral"}'
-
 MARCELO = '{"nomeDoProfessor": "Marcelo", "horarioDeAtendimento": "13:30", "periodo": "Noturno"}'
-
 RENZO = '{"nomeDoProfessor": "RenZo", "horarioDeAtendimento": "17:30", "periodo": "Integral"}'
-
-PADRAO = '{"nomeDoProfessor": "Guilherme", "horarioDeAtendimento": "17:30", "periodo": "Integral"}'
-
-# Easter Egg! :3 (Não tenho nada melhor para fazer na vida...)
-ATUMALACA = '{"nomeDoProfessor": "ATUMALACA", "horarioDeAtendimento": "KK:KK", "periodo": "KKKKKK"}'
