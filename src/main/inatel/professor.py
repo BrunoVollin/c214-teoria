@@ -1,12 +1,39 @@
-'''
-Contém uma classe Professor, representando um professor.
-'''
+"""
+Contains the Professor class.
+
+...
+
+Classes
+-------
+Professor
+    Contains data of a professor.
+"""
 
 
 class Professor():
-    '''
-    Classe representando um professor, com nome, horário de atendimento e período.
-    '''
+    """
+    Class used to represent a professor from Inatel.
+
+    ...
+
+    Initialization
+    --------------
+    nome : str
+        Name of the professor.
+    horario_atendimento : str
+        Professor's hours of attendance in the format "hh:mm"".
+    periodo : str
+        Professor's period, "integral" or "noturno".
+
+    Attributes
+    ----------
+    __nome : str
+        Private name of the professor.
+    __horario_atendimento : str
+        Private professor's hours of attendance in the format "hh:mm"".
+    __periodo : str
+        Private professor's period, "integral" or "noturno".
+    """
 
     def __init__(self, nome: str, horario_atendimento: str, periodo: str):
         self.__nome = nome
@@ -14,37 +41,79 @@ class Professor():
         self.__periodo = periodo
 
     def get_nome(self) -> str:
-        '''
-        Retorna o nome do professor.
-        '''
+        """
+        Returns the name of the professor.
+
+        ...
+
+        Returns
+        -------
+        str
+            Name of the professor.
+        """
         return self.__nome
 
     def set_nome(self, nome: str) -> None:
-        '''
-        Define o nome do professor.
-        '''
+        """
+        Sets the name of the professor.
+
+        ...
+
+        Parameters
+        ----------
+        nome : str
+            Name of the professor.
+        """
         self.__nome = nome
 
     def get_horario_atendimento(self) -> str:
-        '''
-        Retorna o horário de atendimento do professor, das "08:00" às "23:10".
-        '''
+        """
+        Returns the professor's hours of attendance.
+
+        ...
+
+        Returns
+        -------
+        str
+            Professor's hours of attendance in the format "hh:mm"".
+        """
         return self.__horario_atendimento
 
     def set_horario_atendimento(self, horario_atendimento: str) -> None:
-        '''
-        Define o horário de atendimento do professor, das "08:00" às "23:10".
-        '''
+        """
+        Sets the professor's hours of attendance.
+
+        ...
+
+        Parameters
+        ----------
+        horario_atendimento : str
+            Professor's hours of attendance in the format "hh:mm"".
+        """
         self.__horario_atendimento = horario_atendimento
 
     def get_periodo(self) -> str:
-        '''
-        Retorna o periodo do professor, "Integral" ou "Noturno".
-        '''
+        """
+        Returns the professor's period.
+
+        ...
+
+        Returns
+        -------
+        str
+            Professor's period, "integral" or "noturno".
+        """
         return self.__periodo
 
     def set_periodo(self, periodo: str) -> None:
-        '''
-        Define o periodo do professor, "Integral" ou "Noturno".
-        '''
+        """
+        Sets the professor's period.
+
+        ...
+
+        Parameters
+        ----------
+        periodo : str
+            Professor's period, "integral" or "noturno".
+        """
         self.__periodo = periodo

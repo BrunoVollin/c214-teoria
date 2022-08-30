@@ -1,24 +1,56 @@
-'''
-Contém a classe BuscaProfessor, que realiza operações de busca e retorna dados dos professores.
-'''
+"""
+Contains the BuscaProfessor class.
+
+...
+
+Classes
+-------
+BuscaProfessor
+    Contains methods to search for a professor in Inatel's database.
+"""
 
 import json
 from src.main.inatel.professor_service import ProfessorService
 from src.main.inatel.professor import Professor
 
+
 class BuscaProfessor():
-    '''
-    Classe com funções de busca de um professor no banco de dados.
-    '''
+    """
+    Class to search for a professor in Inatel's database.
+
+    ...
+
+    Initialization
+    --------------
+    professor_service : ProfessorService
+        ProfessorService object to access the Inatel's database.
+
+    Attributes
+    ----------
+    __professor_service : ProfessorService
+        Private ProfessorService object to access the Inatel's database.
+    """
 
     def __init__(self, professor_service: ProfessorService):
-        self.professor_service = professor_service
+        self.__professor_service = professor_service
 
     def busca_professor(self, id_num: int) -> Professor:
-        '''
-        Busca um professor pelo seu id e retorna um objeto Professor.
-        '''
-        professor_json = self.professor_service.busca(id_num)
+        """
+        Searches for a professor by id.
+
+        ...
+
+        Parameters
+        ----------
+        id_num : int
+            Id of the professor.
+
+        Returns
+        -------
+        Professor
+            Data of the professor.
+        """
+        professor_json = self.__professor_service.busca(id_num)
         objeto_json = json.loads(professor_json)
 
         return Professor(objeto_json['nomeDoProfessor'],
@@ -26,7 +58,19 @@ class BuscaProfessor():
                          objeto_json['periodo'])
 
     def verifica_professor_existe(self, id_num: int) -> bool:
-        '''
-        Verifica se determinado professor existe e retorna um booleano.
-        '''
-        return self.professor_service.professor_existe(id_num)
+        """
+        Verifies if a professor exists.
+
+        ...
+
+        Parameters
+        ----------
+        id_num : int
+            Id of the professor.
+
+        Returns
+        -------
+        bool
+            True if the professor exists, False otherwise.
+        """
+        return self.__professor_service.professor_existe(id_num)
