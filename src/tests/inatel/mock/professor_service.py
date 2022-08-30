@@ -1,6 +1,8 @@
 """
 Contains the mock class for the inatel.professor_service module.
 
+...
+
 Classes
 -------
 MockProfessorService
@@ -19,6 +21,8 @@ class MockProfessorService(ProfessorService):
     def busca(self, id_num: int) -> str:
         """
         Searches for a professor by id.
+
+        ...
 
         Parameters
         ----------
@@ -46,6 +50,8 @@ class MockProfessorService(ProfessorService):
     def professor_existe(self, id_num: int) -> bool:
         """
         Verifies if a professor exists.
+
+        ...
 
         Parameters
         ----------
