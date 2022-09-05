@@ -12,5 +12,5 @@ Com o [Python](https://www.python.org/downloads/) instalado, execute os seguinte
 python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
-python -m unittest -v src.tests.inatel.__main__
+python -m tests
 ```
