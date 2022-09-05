@@ -76,7 +76,7 @@ class Calculator():
         num : float
             The number to be subtracted from the value displayed on the calculator.
         """
-        # self.__value -= num
+        self.__value -= num
 
     def multiply(self, num: float):
         """
@@ -89,7 +89,7 @@ class Calculator():
         num : float
             The number to be multiplied by the value displayed on the calculator.
         """
-        # self.__value *= num
+        self.__value *= num
 
     def divide(self, num: float):
         """
@@ -108,10 +108,9 @@ class Calculator():
         ZeroDivisionError
             If the number is 0.
         """
-        try:
-            self.__value /= num
-        except ZeroDivisionError:
-            print("Cannot divide by 0!")
+        if num == 0:
+            raise ZeroDivisionError
+        self.__value /= num
 
     def power(self, num: float):
         """
@@ -136,16 +135,14 @@ class Calculator():
         Parameters
         ----------
         num : float
-            The root of the value displayed on the calculator. By default, it is set to 2.
+            The root of the value displayed on the calculator.
+            It must be an integer. By default, it is set to 2.
 
         Raises
         ------
         ValueError
             If the number is less or equal to 0.
         """
-        try:
-            if num <= 0:
-                raise ValueError
-            self.__value **= 1 / num
-        except ValueError:
-            print("The root must be greater than 0!")
+        if num <= 0 or num % 1 != 0:
+            raise ValueError
+        self.__value **= 1 / num
