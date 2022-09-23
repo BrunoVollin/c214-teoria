@@ -23,7 +23,7 @@ Com o [Python](https://www.python.org/downloads/) instalado, execute os seguinte
 python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
-python setup.py build
+python main.py
 ```
 
 **Obs.:** Não é necessário criar outra `venv` nem instalar as dependências novamente caso isso já tenha sido feito.
@@ -36,7 +36,7 @@ Com o [Python](https://www.python.org/downloads/) instalado, execute os seguinte
 python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
-python main.py
+python setup.py build
 ```
 
 **Obs.:** Não é necessário criar outra `venv` nem instalar as dependências novamente caso isso já tenha sido feito.
