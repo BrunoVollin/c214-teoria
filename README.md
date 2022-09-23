@@ -1,4 +1,4 @@
-# Exercício TDD - Calculadora
+# Exercício TDD - Ca
 
 [![Calculator App](https://github.com/bio353/c214-teoria/actions/workflows/python-app.yml/badge.svg?branch=tdd_calculadora)](https://github.com/bio353/c214-teoria/actions/workflows/python-app.yml)
 
