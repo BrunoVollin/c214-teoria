@@ -1,5 +1,7 @@
 # Exercício TDD - Calculadora
 
+[![Calculator App](https://github.com/bio353/c214-teoria/actions/workflows/python-app.yml/badge.svg?branch=tdd_calculadora)](https://github.com/bio353/c214-teoria/actions/workflows/python-app.yml)
+
 ## Explicação da Atividade
 
 Utilize os padrões 1, 2, 3 e 4 para construir uma calculadora. Instancie a classe uma só vez e crie pelo menos 2 cenário negativos (padrão 3).
