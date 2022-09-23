@@ -14,3 +14,29 @@ env\Scripts\activate
 pip install -r requirements.txt
 python -m tests
 ```
+
+## Execução do Programa
+
+Com o [Python](https://www.python.org/downloads/) instalado, execute os seguintes comandos no _prompt_ de comando de sua preferência:
+
+```cmd
+python -m venv env
+env\Scripts\activate
+pip install -r requirements.txt
+python setup.py build
+```
+
+**Obs.:** Não é necessário criar outra `venv` nem instalar as dependências novamente caso isso já tenha sido feito.
+
+## Build (Geração de Arquivo Executável)
+
+Com o [Python](https://www.python.org/downloads/) instalado, execute os seguintes comandos no _prompt_ de comando de sua preferência:
+
+```cmd
+python -m venv env
+env\Scripts\activate
+pip install -r requirements.txt
+python main.py
+```
+
+**Obs.:** Não é necessário criar outra `venv` nem instalar as dependências novamente caso isso já tenha sido feito.
