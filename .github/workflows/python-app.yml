@@ -5,9 +5,9 @@ name: Python application
 
 on:
   push:
-    branches: [ "tdd_caluladora" ]
+    branches: [ "tdd_calculadora" ]
   pull_request:
-    branches: [ "tdd_caluladora" ]
+    branches: [ "tdd_calculadora" ]
 
 permissions:
   contents: read
